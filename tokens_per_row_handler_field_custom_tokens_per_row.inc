@@ -46,7 +46,8 @@ class tokens_per_row_handler_field_custom_tokens_per_row extends views_handler_f
       $invert = FALSE;
 
       if (substr($line, 0, 1) == '!') {
-        if (substr($line, 1, 1) == '!') {
+        $line = substr($line, 1);
+        if (substr($line, 0, 1) == '!') {
           $line = substr($line, 1);
         }
         else {
