@@ -55,7 +55,7 @@ class tokens_per_row_handler_field_custom_tokens_per_row extends views_handler_f
         }
       }
 
-      $value = strtr($line, $tokens);
+      $value = trim(strtr($line, $tokens));
 
       // Return the first non-empty token replacement or empty inverted token replacement.
       if (empty($value)) {
